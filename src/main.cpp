@@ -52,7 +52,7 @@ const int playerEnums[2][3] = {
     {cocos2d::enumKeyCodes::KEY_W, cocos2d::enumKeyCodes::KEY_A, cocos2d::enumKeyCodes::KEY_D}
 };
 
-const int fpsArr[4] = {60,120,180,240};
+const int fpsArr[4] = {15,20,25,30,35,40,45,50,55,60,120,180,240,280,360,420 /* nice lol */,480};
 
 void releaseKeys() {
 	for (int row = 0; row < 2; ++row) {
@@ -1559,16 +1559,6 @@ class $modify(EndLevelLayer) {
 			menu->setPosition({0,0});
         	menu->addChild(btn);
 			layer->addChild(menu);
-		}
-		if ((!mod->getSettingValue<bool>("auto_safe_mode") || isAndroid) && playedMacro) {
-			auto winSize = CCDirector::sharedDirector()->getWinSize();
-			auto layer = reinterpret_cast<CCLayer*>(this->getChildren()->objectAtIndex(0));
-			auto watermarkxd = CCLabelBMFont::create("Recorded with xdBot.", "chatFont.fnt");
-			watermarkxd->setOpacity(60);
-			watermarkxd->setAnchorPoint(ccp(0.0f,0.5f));
-			watermarkxd->setPosition(winSize/2 + ccp(-winSize.width/2, -winSize.height/2) + ccp(3, 6));
-			watermarkxd->setScale(0.5f);
-			layer->addChild(watermarkxd);
 		}
 	}
 
