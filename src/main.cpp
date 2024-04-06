@@ -52,7 +52,7 @@ const int playerEnums[2][3] = {
     {cocos2d::enumKeyCodes::KEY_W, cocos2d::enumKeyCodes::KEY_A, cocos2d::enumKeyCodes::KEY_D}
 };
 
-const int fpsArr[4] = {15,20,25,30,35,40,45,50,55,60,120,180,240,280,360,420 /* nice lol */,480};
+const int fpsArr[17] = {15,20,25,30,35,40,45,50,55,60,120,180,240,280,360,420,480};
 
 void releaseKeys() {
 	for (int row = 0; row < 2; ++row) {
